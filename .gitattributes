@@ -1,0 +1,2 @@
+# Ensure that .svg files retain LF and are not converted to CRLF
+*.svg text eol=lf

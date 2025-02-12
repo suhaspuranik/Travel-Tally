@@ -1,0 +1,277 @@
+root {
+    --primary-color: #064660;
+    --secondary-color: aqua;
+    --my-font: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  .itineraryContainer {
+   
+   
+    color: #064660;
+    font-family: var(--my-font);
+    text-align: left;
+    margin-top: 30px;
+}
+
+.itineraryHeading {
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+   text-decoration: underline;
+   text-underline-offset: 5px;
+}
+
+
+/* Timeline Container */
+.timeline {
+    position: relative;
+    max-width: 100%;
+  
+}
+
+.timeline::after {
+    content: "";
+    position: absolute;
+    width: 4px;
+    background-color: #064660;
+    top: 0;
+    bottom: 0;
+    left: 3%; /* Move timeline to left */
+   
+}
+
+/* Timeline Item */
+.timelineItem {
+   
+    position: relative;
+    background: inherit;
+    width: 100%; /* Everything on the right */
+    padding: 10px 0px;
+    box-sizing: border-box;
+    left: 3%; /* Adjust alignment */
+}
+
+/* Timeline Content */
+.timelineContent {
+    padding: 15px;
+   
+    border-radius: 8px;
+    position: relative;
+}
+
+.timelineContent::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #064660;
+    border-radius: 50%;
+    top: 20px;
+    left: -10px; /* Keep circles aligned with the left timeline */
+}
+
+.itineraryDate{
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+/* Activity List */
+.activityItem {
+    list-style: none;
+    padding: 8px;
+    background: #b2dfdb;
+    margin: 5px 0;
+    border-radius: 5px;
+    margin-left: 2%;
+    
+}
+
+/* Trash Icon */
+.deleteIcon {
+    
+    margin-left: auto;
+    display: inline-block;
+    float: right; /* Aligns to the right end */
+    cursor: pointer;
+    color: red;
+}
+.description{
+    color:#676a6d;
+}
+
+/* Buttons */
+.addButton {
+    font-family: var(--my-font);
+    background-color: #064660;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 1.0rem;
+    margin-left: 2%;
+}
+
+.addButton:hover, .submitButton:hover, .cancelButton:hover {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    border: 2px solid var(--primary-color);
+    color:#064660;
+}
+.submitButton, .cancelButton{
+}
+
+/* No Itinerary Message */
+.noItinerary, .noActivity {
+    font-style: italic;
+    color: #969393;
+    margin-left: 0%;
+    list-style: none;
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modalContent {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 400px;
+}
+
+
+/* modal styles */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark background with transparency */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+ 
+  .modalContent h3 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+  }
+  
+  .activityFormGroup,
+  .activityFormGroup input {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .activityFormGroup label {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--my-font);
+    margin-top: 10px;
+  }
+  
+  .activityFormGroup input {
+    border: 2px solid #ccc;
+    padding: 8px;
+    font-size: 1rem;
+   
+    border-radius: 5px;
+    outline: none;
+    background-color: transparent;
+    color: var(--primary-color);
+  }
+  
+  .activityFormGroup input:focus {
+    border: 2px solid #4b8f8c;
+    
+  }
+  .activitybtn{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 10px;
+    font-family: var(--my-font);
+  }
+  .submitButton,
+  .cancelButton {
+   font-family: var(--my-font);
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid var(--primary-color);
+    border-radius: 5px ;
+    cursor: pointer;
+    width: 100%;
+    color: white;
+  }
+  .submitButton{
+    background-color: green;
+    
+ }
+ .cancelButton{
+    background-color: red;
+ }
+  
+  
+  
+ 
+ 
+  /* Responsive styles for small screens */
+  @media (max-width: 600px) {
+    .modalContent {
+      width: 95%;
+      padding: 15px;
+    }
+  
+    .activityFormGroup label,
+    .activityFormGroup input {
+      font-size: 0.9rem;
+    }
+  
+    .submitButton,
+    .cancelButton {
+      font-size: 0.9rem;
+    }
+  }
+  
+
+/* Responsive Design */
+@media (max-width: 500px) {
+  
+
+    .timelineItem {
+        width: 100%;
+        left: 3%;
+    }
+
+    .timelineContent::before {
+        left: -10px;
+    }
+    .itineraryDate{
+        font-family: 1.1rem;
+    }
+    .activityItem {
+        font-size: 0.9rem;
+    }
+
+    .addButton, .submitButton, .cancelButton {
+        width: 100%;
+    }
+}

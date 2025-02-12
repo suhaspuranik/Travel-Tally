@@ -1,0 +1,182 @@
+/* Colors */
+:root {
+    --primary-color: #064660;
+    --secondary-color: aqua;
+    --background-color: #f4f9f9;
+    --text-color: #ffffff;
+    --modal-bg: rgba(0, 0, 0, 0.6);
+    --input-bg: #eaf6f6;
+    --button-hover: #05626b;
+  }
+.tripSummaryBox{    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+  }
+  
+  .tripSummaryBox h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .tripDates {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 15px;
+  }
+  
+  .editButton {
+    background-color: #064660;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .editButton:hover {
+    background-color: #056a7c;
+  }
+  
+  .editButton:focus {
+    outline: none;
+  }
+  
+  
+  /* Modal Overlay */
+  .modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--modal-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  /* Modal Content */
+  .modalContent {
+    background: var(--primary-color);
+    color: var(--text-color);
+    padding: 2rem;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 450px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  /* Title */
+  .modalTitle {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+  }
+  
+  /* Labels */
+  .modalLabel {
+    display: block;
+    text-align: left;
+    font-size: 1rem;
+    margin-top: 0.8rem;
+    color: var(--secondary-color);
+  }
+  
+  /* Input Fields */
+  .modalInput {
+    width: 100%;
+    padding: 0.8rem;
+    margin-top: 0.4rem;
+    border: none;
+    border-radius: 5px;
+    background: var(--input-bg);
+    font-size: 1rem;
+    color: var(--primary-color);
+  }
+  
+  /* Buttons Container */
+  .modalButtons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+  }
+  
+  /* Save Button */
+  .saveButton {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    border: none;
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .saveButton:hover {
+    background: var(--button-hover);
+    color: var(--text-color);
+  }
+  
+  /* Cancel Button */
+  .cancelButton {
+    background: transparent;
+    color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .cancelButton:hover {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+  }
+  
+  /* Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .modalContent {
+      width: 95%;
+      padding: 1.5rem;
+    }
+  
+    .modalTitle {
+      font-size: 1.5rem;
+    }
+  
+    .modalLabel,
+    .modalInput {
+      font-size: 0.9rem;
+    }
+  
+    .saveButton,
+    .cancelButton {
+      font-size: 0.9rem;
+      padding: 0.6rem 1rem;
+    }
+  }
+  

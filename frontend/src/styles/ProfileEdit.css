@@ -1,0 +1,190 @@
+:root{
+  --my-color: #064660;
+  --my-font: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.profile-edit-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.profile-edit-dialog {
+  background: linear-gradient(to bottom, rgba(221, 246, 247, 0.912) 40%, rgb(251, 251, 252) 40%);
+  border-radius: 20px;
+  width: 90%;
+  max-width: 400px;
+  padding: 20px;
+  position: relative;
+  box-shadow: 0px 4px 15px rgba(162, 161, 161, 0.2);
+  animation: slideInTop 0.8s;
+  text-align: center;
+}
+
+.close-button {
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.close-button:hover {
+  transform: scale(1.15);
+}
+
+h2 {
+  font-family: var(--my-font);
+  color: var(--my-color);
+  margin-bottom: 15px;
+}
+
+.profile-pic-edit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid rgb(255, 252, 252);
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+input[type="file"] {
+  font-family: var(--my-font);
+  padding: 5px;
+}
+
+.password-edit {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.password-edit label {
+  font-weight: bold;
+  color: var(--my-color);
+  display: block;
+  margin-bottom: 5px;
+}
+
+.password-edit input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-family: var(--my-font);
+}
+
+
+.password-toggle {
+  margin: 10px 0;
+}
+
+.toggle-password-button ,.save-button{
+  background-color: var(--my-color);
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 70%;
+}
+
+.toggle-password-button:hover,.save-button:hover {
+  background-color: #f3f5f7;
+  color: black;
+  border: 2px solid black;
+}
+
+.password-edit {
+  margin-bottom: 10px;
+
+}
+.camera-icon {
+  position: absolute;
+  bottom: 18px;
+  right: 5px;
+  background: rgba(251, 250, 250, 0.795);
+  color: rgb(8, 8, 8);
+  border-radius: 50%;
+  padding: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.camera-icon:hover{
+  
+  transform: scale(1.2);
+  cursor: pointer;
+  
+}
+
+.camera-icon-inside {
+  font-size: 1.2rem;
+}
+
+
+.profile-info {
+  text-align: left;
+  /* margin-bottom: 15px; */
+  margin-top: -10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column-reverse;
+  
+}
+
+.profile-info-field {
+  margin-bottom: 10px;
+  width: 80%;
+  
+}
+
+.profile-info-field label {
+  display: block;
+  font-weight: bold;
+  color: var(--my-color);
+  /* margin-bottom: 5px; */
+  text-align: center;
+  
+}
+
+.profile-info-field input {
+  width: 100%;
+  padding: 8px;
+  border:none;
+  border-bottom:1px solid black ;
+  font-family: var(--my-font);
+  background-color:transparent;
+  outline: none;
+  color: var(--my-color);
+  font-size: 1em;
+}
+.profile-info-field input[type="email"]{
+  cursor: not-allowed;
+}
+.profile-info-field {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Adds spacing between icon and input */
+  margin-bottom: 10px;
+}
+
+.profile-icon {
+  color: var(--my-color);
+  font-size: 1.2rem;
+}

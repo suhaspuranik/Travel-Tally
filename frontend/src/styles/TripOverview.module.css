@@ -1,0 +1,240 @@
+:root {
+    --primary-color: #064660;
+    --secondary-color: aqua;
+    --my-font: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  
+  
+  .overviewContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(to bottom, #064660 50%, transparent 50%);
+    margin: 1px;
+    margin-top:65px
+  }
+  
+  .tripOverviewCard {
+    width: 90%;
+    background-color: white;
+   border-radius: 3px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+   
+    position: relative;
+    overflow: hidden;
+  }
+
+  .tripOverviewCard h2 {
+    font-size: 2.5rem;
+   
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  /* Budget styling */
+  .tripOverviewCard p strong {
+    font-size: 1.1rem;
+    color:#666;
+  }
+  
+  .tripOverviewCard p {
+    font-size: 1.2rem;
+    color: #056a7c;
+    line-height: 1.6;
+    margin: 5px 0;
+  }
+  .startEndDate{
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    font-size: 1rem;
+    color: #777;
+  }
+ .overviewButtons{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    
+ }
+ .editButton,
+ .addExpenseButton
+ {
+    background-color:var(--primary-color);
+    width: 200px;
+    color: white;
+    font-family: var(--my-font);
+    font-size: 1.1rem;
+    text-align: center;
+ }
+
+ .editButton:hover{
+  background-color:white;
+  color: var(--primary-color);
+  border: 3px solid var(--primary-color);
+  transform: scale(1.05); /* Slightly enlarges the button */
+  transition: all 0.3s ease-in-out; /* Smooth transition effect */
+  
+  
+ }
+
+ .addExpenseButton:hover{
+  background-color:white;
+  color: var(--primary-color);
+  border: 3px solid var(--primary-color);
+  transform: scale(1.05); /* Slightly enlarges the button */
+  transition: all 0.3s ease-in-out; /* Smooth transition effect */
+  
+ }
+
+ .editOverviewContainer{
+  border: 1px solid #e3e2e2;
+  border-radius: 5px;
+  margin-top: -10px;
+ 
+  
+ }
+ .editFormGroup {
+  display: grid;
+  grid-template-columns: 38% auto; /* First column for label, second for input */
+  align-items: center; /* Align text vertically */
+  gap: 10px 20px; /* Row gap: 10px, Column gap: 20px */
+  margin: 10px;
+
+
+}
+
+.editFormGroup label {
+  font-size: 1rem;
+  color: #666;
+  text-align: right; /* Align label text to the right */
+}
+
+.editFormGroup input {
+  width: 80%;
+  max-width: 300px;
+  padding: 5px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.editFormGroup input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.editSavebtn,
+.editCancelbtn{
+    background-color:var(--primary-color);
+    width: 150px;
+    color: white;
+    font-family: var(--my-font);
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 10px;
+ }
+ .editSavebtn:hover{
+    background-color: green;
+ }
+ .editCancelbtn:hover{
+    background-color: red;
+ }
+
+  
+/* Responsive Design */
+@media (max-width: 500px) {
+    .tripOverviewCard {
+      width: 90%;
+      padding: 15px;
+    }
+  
+    .tripOverviewCard h2 {
+      font-size: 1.5rem;
+    }
+  
+    .tripOverviewCard p strong {
+      font-size: 0.8rem;
+    }
+  
+    .tripOverviewCard p {
+      font-size: 0.9rem;
+    }
+    .overviewButtons{
+        gap: 10px;
+     }
+    .editButton,
+    .addExpenseButton{
+      padding: 10px;
+       font-size: 0.8rem;
+       
+    }
+    .editFormGroup {
+      grid-template-columns: 40% auto; /* Adjust column width */
+      gap: 5px 10px; /* Adjust row and column gap */
+    }
+    .editFormGroup label {
+      font-size: 0.9rem;
+     
+    }
+    .editFormGroup input {
+      font-size: 0.8rem;
+      width:110px;
+     
+    }
+    .editSavebtn,
+.editCancelbtn{
+  font-size: 0.9rem;
+  width: 90px;
+  padding: 10px;
+}
+
+
+
+
+
+    .expenseCard {
+      padding: 12px;
+    }
+  
+    .expenseEdit,
+    .expenseDelete {
+      top:10%;
+      transform: none;
+    }
+  
+    .expenseEdit img,
+    .expenseDelete img {
+      width: 18px;
+      height: 18px;
+    }
+    .expenseCard p:nth-child(2){
+      font-size: 14px;
+    }
+    .expenseModal,
+    .equallySplitDialog,
+    .unequallySplitDialog {
+      width: 95%;
+      padding: 15px;
+    }
+  
+    .equallySplitDialog button,
+    .unequallySplitDialog button {
+      padding: 8px;
+      font-size: 14px;
+    }
+  
+    .unequalLabel {
+      width: 150px; /* Adjust label width on smaller screens */
+      font-size: 13px; /* Smaller font size */
+    }
+  
+    .unequalInput {
+      font-size: 12px; /* Adjust input font size */
+    }
+    
+   
+  }
+  

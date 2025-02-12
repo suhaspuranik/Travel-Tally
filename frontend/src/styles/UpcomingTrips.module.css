@@ -1,0 +1,501 @@
+.Upcomingcontainer {
+  /* padding: 2rem; */
+  max-width: 90%;
+  margin: -30px auto;
+  background-color: var(--background-color);
+  border-radius: 12px;
+}
+
+.Upcomingheading {
+  margin-top: 2em;
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+  text-align: center;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.Upcomingcarousel {
+  display: flex;
+  align-items: center;
+  position: relative;
+  border: 1px solid rgba(231, 235, 235, 0.8);
+  border-radius: 12px;
+  padding: 2rem 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  background-color: var(--accent-color);
+  transition: box-shadow 0.3s ease;
+}
+
+.Upcomingcarousel:hover {
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15);
+}
+
+.UpcomingarrowLeft,
+.UpcomingarrowRight {
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  font-size: 2rem;
+  padding: 12px;
+  border-radius: 50%;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.UpcomingarrowLeft:hover,
+.UpcomingarrowRight:hover {
+  transform: translateY(-50%) scale(1.15);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.UpcomingarrowLeft {
+  left: 10px;
+}
+
+.UpcomingarrowRight {
+  right: 10px;
+}
+
+.UpcomingtripList {
+  display: flex;
+  gap: 1.5rem;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+.UpcomingtripCard {
+  background-color: #f0f6f8;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  min-width: 18rem;
+  flex-shrink: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.UpcomingtripCard:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.UpcomingcardHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.Upcomingdestination {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.Upcomingdestination svg {
+  margin-right: 10px;
+  color: var(--secondary-color);
+}
+
+.UpcomingimageContainer {
+  position: relative;
+  margin: 1.5rem 0;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.UpcomingtripImage,
+.UpcomingdefaultImage {
+  width: 100%;
+  height: 180px; /* Maintain aspect ratio */
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.UpcomingimageContainer:hover .UpcomingtripImage,
+.UpcomingimageContainer:hover .UpcomingdefaultImage {
+  transform: scale(1.1);
+}
+
+.UpcomingimageIcon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 8px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.UpcomingimageIcon:hover {
+  transform: scale(1.2);
+}
+
+.UpcomingimageInput {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.calender,
+.tripmatesimg {
+  height: 18px;
+  width: 18px;
+  vertical-align: middle;
+  margin-bottom: 0.2rem;
+}
+
+.UpcomingtripDetails {
+  font-size: 1rem;
+  color: #4b5563;
+  margin-top: 1rem;
+}
+
+.UpcomingtripDetails p {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.UpcomingtripDetails img {
+  width: 20px;
+  height: 20px;
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.OngoingarrowLeft,
+.OngoingarrowRight {
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  font-size: 2rem;
+  padding: 12px;
+  border-radius: 50%;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.OngoingarrowLeft:hover,
+.OngoingarrowRight:hover {
+  transform: translateY(-50%) scale(1.15);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.OngoingarrowLeft {
+  left: 10px;
+}
+
+.OngoingarrowRight {
+  right: 10px;
+}
+
+.Ongoingcarousel {
+  display: flex;
+  align-items: center;
+  position: relative;
+  border: 1px solid rgba(231, 235, 235, 0.8);
+  border-radius: 12px;
+  padding: 2rem 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  background-color: var(--accent-color);
+  transition: box-shadow 0.3s ease;
+}
+
+.Ongoingcarousel:hover {
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15);
+}
+
+.OngoingtripList {
+  display: flex;
+  gap: 1.5rem;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+.OngoingtripCard {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  min-width: 18rem;
+  flex-shrink: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.OngoingtripCard:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.OngoingcardHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  
+}
+
+.Ongoingdestination {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.Ongoingdestination svg {
+  margin-right: 10px;
+  color: var(--secondary-color);
+}
+
+.OngoingimageContainer {
+  position: relative;
+  margin: 1.5rem 0;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.OngoingtripImage {
+  width: 100%;
+  height: 180px; /* Maintain aspect ratio */
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.OngoingimageContainer:hover .OngoingtripImage {
+  transform: scale(1.1);
+}
+
+.calender,
+.tripmatesimg {
+  height: 18px;
+  width: 18px;
+  vertical-align: middle;
+  margin-bottom: 0.2rem;
+}
+
+.OngoingtripDetails {
+  font-size: 1rem;
+  color: #4b5563;
+  margin-top: 1rem;
+}
+
+.OngoingtripDetails p {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.OngoingtripDetails img {
+  width: 20px;
+  height: 20px;
+}
+.UpcomingtripImage,
+.UpcomingdefaultImage,
+.OngoingtripImage {
+  width: 250px; /* Fixed width */
+  height: 200px; /* Fixed height */
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+@media only screen and (max-width: 768px) {
+  /* Adjust card container */
+  .UpcomingtripList,
+  .OngoingtripList {
+    flex-direction: column; /* Stack the cards vertically */
+    gap: 1rem; /* Reduce the gap between cards */
+  }
+
+  /* Adjust individual card styling */
+  .UpcomingtripCard,
+  .OngoingtripCard {
+    min-width: 90%; /* Make the card slightly smaller, adjust percentage as needed */
+    padding: 1rem; /* Adjust padding for smaller screens */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Slightly reduce the box shadow */
+  }
+
+  /* Adjust image size */
+  .UpcomingtripImage,
+  .UpcomingdefaultImage,
+  .OngoingtripImage {
+    width: 100%; /* Make image take full width of the card */
+    height: 150px; /* Reduce height for mobile */
+  }
+
+  /* Adjust card header font size */
+  .Upcomingdestination,
+  .Ongoingdestination {
+    font-size: 1rem; /* Reduce font size for mobile */
+  }
+
+  /* Keep arrow buttons structure and adjust their size */
+  .UpcomingarrowLeft,
+  .UpcomingarrowRight,
+  .OngoingarrowLeft,
+  .OngoingarrowRight {
+    font-size: 1.8rem; /* Slightly reduce arrow size */
+    padding: 10px; /* Adjust padding to match smaller size */
+  }
+
+  /* Adjust the itinerary section on mobile */
+  .UpcomingtripDetails,
+  .OngoingtripDetails {
+    font-size: 0.9rem; /* Reduce font size for smaller screens */
+  }
+  .UpcomingarrowLeft,.UpcomingarrowRight{
+    display: none;
+  }
+}
+.UpcomingtripDetails .daysLeft {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Ensures space between text and icon */
+  color: rgb(255, 0, 0) !important;
+  font-weight: bold;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.daysText {
+  flex: 1; /* Pushes the trash icon to the right */
+}
+
+.trashContainer {
+  position: relative;
+  display: inline-block;
+}
+
+.trashIcon {
+  color: rgb(128, 0, 0);
+  font-weight: bold;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.trashIcon:hover {
+  transform: scale(1.2);
+  color: rgb(200, 0, 0);
+}
+
+.tooltip {
+  visibility: hidden;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 5px 8px;
+  border-radius: 4px;
+  position: absolute;
+  bottom: 100%; /* Position above the icon */
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-size: 12px;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.trashContainer:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+.tripDetails {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Keeps the icon on the right */
+  width: 100%;
+}
+
+.tripMates {
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Reduce space between icon and text */
+}
+
+.tripmatesimg {
+  width: 16px; /* Adjust size */
+  height: 16px;
+}
+
+.trashContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.trashIcon {
+  color: rgb(11, 11, 11);
+  font-weight: 900;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  margin-left: auto;
+}
+
+.trashIcon:hover {
+  transform: scale(1.2);
+  color: rgb(200, 0, 0);
+}
+
+.tooltip {
+  margin-right: 10px;
+  visibility: hidden;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 5px 8px;
+  border-radius: 4px;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-70%);
+  white-space: nowrap;
+  font-size: 12px;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.trashContainer:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+.budgetContainer{
+  margin-left: 20px;
+  padding-left: 25px;
+}

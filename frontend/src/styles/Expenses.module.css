@@ -1,0 +1,441 @@
+:root {
+  --primary-color: #064660;
+  --secondary-color: aqua;
+  --my-font: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+.expensesContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(to bottom, #064660 50%, transparent 50%);
+  margin: 1px;
+  margin-top:65px
+}
+
+.tripDetailsCard {
+  width: 90%;
+  background-color: white;
+ border-radius: 3px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+ 
+  position: relative;
+  overflow: hidden;
+}
+
+/* Destination heading */
+.tripDetailsCard h2 {
+  font-size: 2.5rem;
+  font-variant: small-caps;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Budget styling */
+.tripDetailsCard p strong {
+  font-size: 1rem;
+  color:#666;
+}
+
+.tripDetailsCard p {
+  font-size: 1.2rem;
+  color: #056a7c;
+  margin: 5px 0;
+}
+
+/* Spent and Remaining in one line */
+.spentRemaining {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 1rem;
+  color: #777;
+}
+
+/* Add Expense Button */
+.addExpenseBtn {
+  background-color: #064660;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s;
+  margin-top: 10px;
+  font-family: var(--my-font);
+}
+
+.addExpenseBtn:hover {
+  background-color: rgb(22, 196, 223);
+  transform: scale(1.05);
+  color:white;
+  font-weight: bold;
+  border: 1px solid var(--primary-color);
+}
+
+.expenseList {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 10px;
+}
+
+/* Expense Card */
+.expenseCard {
+  background: #f8f9fa;
+  border-left: 5px solid #064660;
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.expenseCard:hover {
+  transform: scale(1.02);
+}
+
+.expenseCard p {
+  margin: 3px 0;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Date at the top */
+.expenseCard p:first-child {
+  font-weight: bold;
+  color: #064660;
+
+}
+
+/* Category and Amount in the same row */
+.expenseCard p:nth-child(2) {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 16px;
+  text-transform: capitalize;
+}
+
+
+/* Description below category */
+.expenseCard p:nth-child(3) {
+  font-size: 13px;
+  color: #666;
+  text-transform: capitalize;
+}
+
+/* Paid by section */
+.expenseCard p:nth-child(4), 
+.expenseCard p:nth-child(5) {
+  font-style: italic;
+  font-size: 12px;
+  color: #444;
+}
+
+/* Buttons aligned vertically on the right */
+.expenseEdit,
+.expenseDelete {
+  position: absolute;
+  top: 20%;
+
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0px;
+}
+.expenseEdit{
+  right: 45px;
+  
+}
+.expenseDelete{
+  right: 15px;
+}
+
+
+.expenseEdit img,
+.expenseDelete img {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.expenseEdit:hover img,
+.expenseDelete:hover img {
+  transform: scale(1.1);
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Black shade with 50% transparency */
+  z-index: 999; /* Ensure it's above other content */
+}
+
+/* Expense Modal */
+.expenseModal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  
+}
+
+.expenseModal h3 {
+  margin-bottom: 10px;
+  color: #064660;
+}
+
+.expenseModal form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.expenseModal input,
+.expenseModal select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  font-family: var(--my-font);
+}
+.expenseModal input:focus,
+.expenseModal select:focus{
+  border-color: #064660; /* Focused input border color */
+  outline: none; /* Removes default focus outline */
+
+}
+
+.expenseModal input[type="date"]:not(:valid){
+  color:grey;
+}
+
+select:has(option[value=""]:checked) {
+  color: grey /* Change to any color */
+}
+
+.expenseModal button {
+  background-color: #064660;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-family: var(--my-font);
+  letter-spacing: 1px;
+}
+ .adjustSplitbtn:hover {
+  background-color: #2e93cd;
+}
+.submitbtn:hover{
+  background-color: green;
+
+}
+.cancelbtn:hover{
+  background-color: red;
+
+}
+
+
+/* Popup Overlay - Light Black Background */
+.popupOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Darker background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Pop-up Dialog for Equally & Unequally Split */
+.equallySplitDialog,
+.unequallySplitDialog {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  width: 90%;
+  max-width: 350px;
+}
+
+.equallySplitDialog h3,
+.unequallySplitDialog h3 {
+  margin-bottom: 10px;
+  color: #064660;
+
+}
+.equalContainer{
+  margin-top: 10px;
+  max-height: 250px; /* Set a maximum height */
+  overflow-y: auto; /* Enable vertical scrollbar if needed */
+  padding: 10px;
+  border: 1px solid #ccc; /* Optional: Just for better visibility */
+  border-radius: 5px;
+  background: #e9e9e9; /* Light grey background */
+}
+
+.equalContainer::-webkit-scrollbar {
+  width: 6px;
+}
+
+.equalContainer::-webkit-scrollbar-thumb {
+  background: #064660;
+  border-radius: 4px;
+}
+
+.equalContainer::-webkit-scrollbar-thumb:hover {
+  background: #052e45;
+}
+
+.equallySplitDialog label,
+.unequallySplitDialog label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 5px 0;
+  
+}
+.splitMsg{
+  color:rgb(75, 75, 75);
+  margin-bottom:10px;
+}
+
+.equallySplitDialog button,
+.unequallySplitDialog button {
+  background-color: #064660;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top:10px;
+  margin-right: 5px;
+  transition: background 0.3s ease;
+  font-family: var(--my-font);
+  width: 30%;
+}
+.unequalSplit {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  gap: 5px; /* Spacing between label and input */
+}
+
+.unequalLabel {
+
+  font-weight: 500;
+ 
+  width: 250px; /* Fixed width to align all labels */
+  text-align: left; /* Aligns label text to the right */
+}
+
+.unequalInput {
+  width: 100px;
+  padding: 8px;
+
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+}
+
+.unequalInput:focus {
+  border-color: #064660; /* Focused input border color */
+  outline: none; /* Removes default focus outline */
+}
+
+
+.unequalSplit:last-child {
+  margin-bottom: 0; /* Removes bottom margin from last input */
+}
+
+
+
+
+/* Responsive Design */
+@media (max-width: 500px) {
+  .tripDetailsCard {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .tripDetailsCard h2 {
+    font-size: 1.5rem;
+  }
+
+  .tripDetailsCard p strong {
+    font-size: 0.8rem;
+  }
+
+  .tripDetailsCard p {
+    font-size: 0.9rem;
+  }
+  .expenseCard {
+    padding: 12px;
+  }
+
+  .expenseEdit,
+  .expenseDelete {
+    top:10%;
+    transform: none;
+  }
+
+  .expenseEdit img,
+  .expenseDelete img {
+    width: 18px;
+    height: 18px;
+  }
+  .expenseCard p:nth-child(2){
+    font-size: 14px;
+  }
+  .expenseModal,
+  .equallySplitDialog,
+  .unequallySplitDialog {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .equallySplitDialog button,
+  .unequallySplitDialog button {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .unequalLabel {
+    width: 150px; /* Adjust label width on smaller screens */
+    font-size: 13px; /* Smaller font size */
+  }
+
+  .unequalInput {
+    font-size: 12px; /* Adjust input font size */
+  }
+ 
+}

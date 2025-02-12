@@ -1,0 +1,16 @@
+/* Container for the entire dashboard */
+.bodyDiv{
+  max-width: 80%;
+  align-items: start;
+  margin-top: 0px;
+  margin: 0 auto;
+  /* background-color: green;  */
+}
+.upcoming-container {
+    align-items: end;
+    margin-top:3rem;
+   
+  }
+  
+  
+  

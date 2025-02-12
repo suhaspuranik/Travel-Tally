@@ -1,0 +1,124 @@
+/* For large screen */
+:root{
+  --primary-color: #064660;
+  --secondary-color:aqua;
+  --my-font: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+} 
+.usernavbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  background-color: var(--primary-color);
+  color: white;
+  align-items: center;
+}
+
+.usernavbarLeft {
+  display: flex;
+  align-items: center;
+}
+
+.TravelLogo {
+  height: auto;
+  max-width: 140px; 
+  transition: max-width 0.3s ease;
+  margin-left: 1em ;
+}
+
+.usernavbarLinks {
+  list-style-type: none;
+  display: flex;
+  margin-left: 2rem;
+  
+  
+}
+
+.usernavbarLinks li {
+  margin-right: 4rem;
+  
+}
+.usernavbarLinks li a{
+  text-decoration: none;
+  color: white;
+}
+.usernavbarLinks li a:hover{
+ 
+  color: var(--secondary-color);
+}
+.usernavbarRight {
+  position: relative;
+  
+}
+
+.userprofileIcon img {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  margin-right: 1rem;
+  border: 2px solid white;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+.userdropdownMenu {
+  position: absolute;
+  top: 3.5rem;
+  right: 1rem;
+  background-color:var(--primary-color);
+  z-index: 10;
+  min-width: 155px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem;
+  border-radius: 5px;
+  animation: fadeIn 0.5s ease-out;
+  text-align: center;
+  
+}
+
+.userdropdownMenu ul {
+  list-style-type: none;
+ 
+}
+.userdropdownMenu li {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+ 
+}
+.userdropdownMenu li a{
+
+  color: white;
+  text-decoration: none;
+}
+
+.userdropdownMenu li:hover {
+  background-color: rgba(216, 241, 251, 0.2);
+}
+
+/* For mobile screen */
+.usernavbarMobile {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  
+  width: 100%;
+  
+}
+
+@media (max-width: 700px) {
+  .usernavbarLeft {
+    display: none;
+  }
+  .usernavbarRight {
+    display: none;
+  }
+  .usernavbarMobile {
+    display: flex;
+   
+  }
+  .userdropdownMenu{
+    top:4rem;
+  }
+  
+}

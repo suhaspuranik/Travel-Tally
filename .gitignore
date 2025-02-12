@@ -1,0 +1,90 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+
+# images directory
+backend/uploads/
+
+# Dependency directories
+node_modules/
+frontend/node_modules/
+# backend/node_modules/
+
+# Build directories
+dist/
+dist-ssr/
+frontend/dist/
+backend/dist/
+
+# Local environment files
+*.local
+.env
+.env.*.local
+
+# Backend-specific files
+# backend/.env
+# backend/migrations/
+# backend/*.sqlite3
+
+# Frontend-specific files
+frontend/.env
+frontend/.next/
+frontend/out/
+
+# Editor directories and files
+.vscode/
+!.vscode/extensions.json
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS or system-specific files
+Thumbs.db
+*.bak
+
+# Test and coverage reports
+coverage/
+*.lcov
+*.lcov.*
+.nyc_output/
+
+# Temporary files
+tmp/
+temp/
+*.pid
+*.seed
+*.pid.lock
+
+# Package manager files
+package-lock.json
+yarn.lock
+.pnpm-debug.log
+*.tsbuildinfo
+
+# Generated files
+*.min.js
+*.map
+*.gz
+*.tgz
+*.zip
+
+# Git-related
+.git/
+!.gitignore
+
+# Ignore any empty folder markers
+**/.gitkeep
+
+# Miscellaneous
+*.iml
+*.swp
+*.swo

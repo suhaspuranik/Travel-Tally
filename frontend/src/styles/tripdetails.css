@@ -1,0 +1,40 @@
+.cover-image-container {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.cover-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.map-container {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+input[type="date"],
+input[type="number"] {
+    padding: 10px;
+    width: 100%;
+    margin: 0.5rem 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+button.save-button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+button.save-button:hover {
+    background-color: #0056b3;
+}

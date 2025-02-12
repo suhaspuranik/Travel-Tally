@@ -1,0 +1,207 @@
+/* General Styles */
+:root{
+    --my-color: #064660;
+    --my-font: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--my-font);
+    background-color: #f4f8fb;
+    color: #333;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+  
+
+
+.container {
+    background-color: #ffffffb6;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.heading {
+    font-size: 24px;
+    color: var(--my-color);
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Back Button Container */
+.backContainer {
+    position: absolute; /* Position it relative to the top-left corner */
+    top: 20px; /* Distance from the top */
+    left: 20px; /* Distance from the left */
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Back Button */
+  .backButton {
+    display: flex;
+    align-items: center;
+    
+    font-family: var(--my-font);
+    color: var(--my-color);
+    font-size: 16px;
+    cursor: pointer;
+    padding: 5px 10px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    background-color: white;
+    
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    border: 2px solid var(--my-color);
+  }
+  
+  /* Back Button Hover */
+  .backButton:hover {
+    
+    border: 2px solid white;
+    background-color:#aaa; 
+  }
+  
+  /* Logo */
+  .back {
+    width: 20px; /* Logo width */
+    height: 20px; /* Logo height */
+    margin-right: 8px; /* Space between logo and text */
+  }
+
+  
+
+/* Form Styles */
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputGroup {
+    margin-bottom: 3vh;
+    position: relative;
+}
+
+.input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: all 0.3s ease;
+    font-family: var(--my-font);
+}
+
+.input:focus {
+    border-color: var(--my-color);
+}
+
+.forgotpass{
+    border: none;
+    background-color: transparent;
+    margin-bottom: 3vh;
+    cursor: pointer;
+    font-family: var(--my-font);
+    padding: 0;
+}
+.forgotpass:hover{
+    color: var(--my-color);
+}
+.button {
+    padding: 12px;
+    background-color: var(--my-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: var(--my-font);
+}
+
+.button:hover {
+    background-color: #064660d3;
+}
+
+.button:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+}
+
+/* Google Login Button */
+.googleButton {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--my-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+    font-family: var(--my-font);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.googleButton .googleIcon{
+    font-size: large;
+}
+.googleButton:hover {
+    background-color: #064660d3;
+}
+
+/* Message Styles */
+.message {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #e74c3c;
+}
+
+.message.success {
+    color: #2ecc71;
+}
+
+/* Signup , Signin*/
+.signup, .signin{
+    margin: 10px 0 0;
+    font-family: var(--my-font);
+    font-size: 1em;
+}
+.signupButton, .signinButton{
+    background-color: transparent;
+    border: none;
+    font-family: var(--my-font);
+    font-size: 1em;
+    cursor: pointer;
+    padding: 0;
+    text-decoration: none;
+    color: var(--my-color);
+}
+.signupButton:hover, .signinButton:hover{
+    color:#0a77a2;
+    
+}
+
+.passToggle{
+    position:absolute;
+    font-size: 1.2rem;
+    cursor: pointer;
+    top: 25%;
+    right: 4%;
+}

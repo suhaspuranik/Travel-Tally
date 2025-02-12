@@ -1,0 +1,145 @@
+:root{
+  --primary-color: #064660;
+  --secondary-color:aqua;
+  --my-font: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+.dialogOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .dialogBox {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 95%;
+    max-width:500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  
+  .dialogHeading {
+    font-size: 1.5rem;
+    color:var(--primary-color);
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .inputContainer {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .companionInput {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: var(--my-font);
+  }
+  
+  .companionInput:focus{
+    outline: none;
+    border-color: var(--primary-color);
+  }
+  .addButton {
+    padding: 0.5rem 1rem;
+    background: var(--primary-color);
+    color: white;
+    
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: var(--my-font);
+  }
+  
+  .addButton:hover {
+    background: #fefffe;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+  }
+  
+  .companionList {
+    max-height: 200px;
+    overflow-y: auto;
+    border-top: 1px solid #ddd;
+    padding-top: 0.5rem;
+  }
+  
+/* WebKit browsers (Chrome, Edge, Safari) */
+.companionList::-webkit-scrollbar {
+  width: 8px;
+}
+
+.companionList::-webkit-scrollbar-thumb {
+  background:rgb(128, 128, 128);/* Blue thumb */
+  border-radius: 3px;
+}
+
+.companionList::-webkit-scrollbar-thumb:hover {
+  background:rgb(109, 108, 108);; /* Darker blue on hover */
+}
+
+.companionList::-webkit-scrollbar-track {
+  background: #cbc9c9; /* Light gray track */
+  border-radius: 0px;
+}
+  .companionItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+   .deleteTripmateBtn{
+    height: 20px;
+    width: 20px;
+    margin-right: 1rem;
+  }
+  .removeButton{
+    padding: 0px;
+    margin: 0px;
+    background-color: transparent;
+  }
+  .noCompanionsText {
+    text-align: center;
+    color: #999;
+  }
+  
+  .closeButton {
+    width: 100%;
+    padding: 0.5rem;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+    cursor: pointer;
+    font-family: var(--my-font);
+  }
+  
+  .closeButton:hover {
+    background: #555;
+    color: black;
+    font-weight: bold;
+    
+  }
+
+  @media(max-width:400px)
+  {
+    .dialogBox{
+      padding: 1.5rem;
+    }
+    .dialogHeading {
+      font-size: 1.25rem;
+    }
+  }
+  
